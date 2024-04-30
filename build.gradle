@@ -61,3 +61,19 @@ jacocoTestReport {
         html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
     }
 }
+
+
+// Define custom task to download SonarQube analysis report
+task downloadSonarQubeReport(type: Exec) {
+    group = 'reporting'
+    description = 'Downloads the SonarQube analysis report'
+
+    // Customize the command according to your SonarQube setup
+    commandLine './gradlew', 'sonarqube', '-Dsonar.login=8498f0c9772de28e6b5ceb35f4a9f147ba5602e5', '-Dsonar.projectKey=Chaithanya-Sakinala_SonarQube', '-Dsonar.organization=chaithanya-sakinala', '-Dsonar.analysis.mode=publish', '-Dsonar.report.export.path=sonar-report.json'
+}
+
+// Define dependencies for the custom task
+downloadSonarQubeReport.dependsOn('sonarqube')
+
+
+
