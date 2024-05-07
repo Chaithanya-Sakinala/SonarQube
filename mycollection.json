@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "c66e781a-432d-4de4-8a9d-4d7f04299925",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34456931"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/distancematrix/json?origins=Valparaiso%2C%20IN&destinations=Chicago%20IL&units=imperial&key=$sec",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"distancematrix",
+						"json"
+					],
+					"query": [
+						{
+							"key": "origins",
+							"value": "Valparaiso%2C%20IN"
+						},
+						{
+							"key": "destinations",
+							"value": "Chicago%20IL"
+						},
+						{
+							"key": "units",
+							"value": "imperial"
+						},
+						{
+							"key": "key",
+							"value": "$sec"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://maps.googleapis.com/maps/api/distancematrix/json?origins=Valparaiso%2C%20University&destinations=Chicago%20IL&units=imperial&key=$sec",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/distancematrix/json?origins=Valparaiso%2C%20University&destinations=Chicago%20IL&units=imperial&key=$sec",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"distancematrix",
+						"json"
+					],
+					"query": [
+						{
+							"key": "origins",
+							"value": "Valparaiso%2C%20University"
+						},
+						{
+							"key": "destinations",
+							"value": "Chicago%20IL"
+						},
+						{
+							"key": "units",
+							"value": "imperial"
+						},
+						{
+							"key": "key",
+							"value": "$sec"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://maps.googleapis.com/maps/api/distancematrix/json?origins=Valparaiso%2C%20IN&destinations=Cary%20NC&units=imperial&key=$sec",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/distancematrix/json?origins=Valparaiso%2C%20IN&destinations=Cary%20NC&units=imperial&key=$sec",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"distancematrix",
+						"json"
+					],
+					"query": [
+						{
+							"key": "origins",
+							"value": "Valparaiso%2C%20IN"
+						},
+						{
+							"key": "destinations",
+							"value": "Cary%20NC"
+						},
+						{
+							"key": "units",
+							"value": "imperial"
+						},
+						{
+							"key": "key",
+							"value": "$sec"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
