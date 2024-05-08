@@ -11,6 +11,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Create dir
+        run: |
+          mkdir SampleArtifact
+    #Install Nodejs
+      - name: Install Node
+        uses: actions/checkout@v3
+        with:
+          node-version : 16
+    #Install newman and reporter
+      - name: Install newman
+        run: |
+          npm install -g newman
+          npm install -g newman-reporter-htmlextra
+  #Run Collection
+      - name: Run Collection
+        run: |
+          newman run "collections/mycollection.json" -r htmlextra --reporter-htmlextra-export SampleArtifact/report.html
+#Publish the Report
+      - name: Publish Report
+        uses: actions/upload-artifact@v3
+        with:
+          name : Reports
+          path : SampleArtifact
+
+    #SonarCloud
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Set up JDK 17
